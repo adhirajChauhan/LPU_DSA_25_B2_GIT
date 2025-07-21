@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "stack": "cpp"
+        "stack": "cpp",
+        "list": "cpp",
+        "unordered_map": "cpp"
     }
 }
