@@ -62,3 +62,61 @@
         
 //     }
 // };
+
+//-------------------------
+
+// https://www.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1
+
+
+// class Solution {
+//   public:
+  
+//   bool dfs(int node, vector<vector<int>> &adj, vector<bool> &visited, vector<bool> &rec){
+      
+//       visited[node] = true;
+//       rec[node] = true;
+      
+//       for(int neighbor : adj[node]){
+//           if(!visited[neighbor]){
+//               if(dfs(neighbor, adj, visited, rec)){
+//                   return true; //cycle detected in deeper path
+//               }
+              
+//           }
+//           else if(rec[neighbor]){
+//               //if neighbor is in rec vector -> cycle
+//               return true;
+//           }
+//       }
+//       rec[node] = false;
+//       return false;
+//   }
+  
+//     bool isCyclic(int V, vector<vector<int>> &edges) {
+//         //Convert edge list to adjcency list
+//         vector<vector<int>> adj(V);
+//         for(auto edge : edges){
+//             int u = edge[0];
+//             int v = edge[1];
+            
+//             adj[u].push_back(v); //directed edge u -> v
+            
+//         }
+        
+//         //Intialize visited and rec
+//         vector<bool> visited(V, false);
+//         vector<bool> rec(V, false);
+        
+//         //run DFS from all unvisited nodes
+//         for(int i = 0; i < V; i++){
+//             if(!visited[i]){
+//                 if(dfs(i, adj, visited, rec)){
+//                     return true; //cycle found
+//                 }
+//             }
+            
+//         }
+//         return false;
+        
+//     }
+// };
